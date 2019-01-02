@@ -1,0 +1,36 @@
+<template>
+  <span :aria-hidden="decorative"
+        :aria-label="title"
+        class="material-design-icon cisco-webex-icon"
+        role="img">
+    <svg :fill="fillColor"
+         class="material-design-icon__svg"
+         width="24"
+         height="24"
+         viewBox="0 0 24 24">
+      <path d="M12,3C16.97,3 21,7.03 21,12C21,16.97 16.97,21 12,21C7.03,21 3,16.97 3,12C3,7.03 7.03,3 12,3M5.94,8.5C4,11.85 5.15,16.13 8.5,18.06C11.85,20 18.85,7.87 15.5,5.94C12.15,4 7.87,5.15 5.94,8.5Z">
+        <title>{{ title }}</title>
+      </path>
+    </svg>
+  </span>
+</template>
+
+<script>
+export default {
+  name: "CiscoWebexIcon",
+  props: {
+    title: {
+      type: String,
+      default: "Cisco Webex icon"
+    },
+    decorative: {
+      type: Boolean,
+      default: false
+    },
+    fillColor: {
+      type: String,
+      default: "currentColor"
+    }
+  }
+}
+</script>

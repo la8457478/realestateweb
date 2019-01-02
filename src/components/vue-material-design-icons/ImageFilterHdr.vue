@@ -1,0 +1,36 @@
+<template>
+  <span :aria-hidden="decorative"
+        :aria-label="title"
+        class="material-design-icon image-filter-hdr-icon"
+        role="img">
+    <svg :fill="fillColor"
+         class="material-design-icon__svg"
+         width="24"
+         height="24"
+         viewBox="0 0 24 24">
+      <path d="M14,6L10.25,11L13.1,14.8L11.5,16C9.81,13.75 7,10 7,10L1,18H23L14,6Z">
+        <title>{{ title }}</title>
+      </path>
+    </svg>
+  </span>
+</template>
+
+<script>
+export default {
+  name: "ImageFilterHdrIcon",
+  props: {
+    title: {
+      type: String,
+      default: "Image Filter Hdr icon"
+    },
+    decorative: {
+      type: Boolean,
+      default: false
+    },
+    fillColor: {
+      type: String,
+      default: "currentColor"
+    }
+  }
+}
+</script>

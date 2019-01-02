@@ -1,0 +1,36 @@
+<template>
+  <span :aria-hidden="decorative"
+        :aria-label="title"
+        class="material-design-icon pi-icon"
+        role="img">
+    <svg :fill="fillColor"
+         class="material-design-icon__svg"
+         width="24"
+         height="24"
+         viewBox="0 0 24 24">
+      <path d="M4,5V7H6V19H8V7H14V16C14,17.66 15.34,19 17,19C18.66,19 20,17.66 20,16H18C18,16.55 17.55,17 17,17C16.45,17 16,16.55 16,16V7H18V5">
+        <title>{{ title }}</title>
+      </path>
+    </svg>
+  </span>
+</template>
+
+<script>
+export default {
+  name: "PiIcon",
+  props: {
+    title: {
+      type: String,
+      default: "Pi icon"
+    },
+    decorative: {
+      type: Boolean,
+      default: false
+    },
+    fillColor: {
+      type: String,
+      default: "currentColor"
+    }
+  }
+}
+</script>
