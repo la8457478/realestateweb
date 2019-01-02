@@ -1,0 +1,36 @@
+<template>
+  <span :aria-hidden="decorative"
+        :aria-label="title"
+        class="material-design-icon arrow-collapse-vertical-icon"
+        role="img">
+    <svg :fill="fillColor"
+         class="material-design-icon__svg"
+         width="24"
+         height="24"
+         viewBox="0 0 24 24">
+      <path d="M4,12H20V14H4V12M4,9H20V11H4V9M16,4L12,8L8,4H11V1H13V4H16M8,19L12,15L16,19H13V22H11V19H8Z">
+        <title>{{ title }}</title>
+      </path>
+    </svg>
+  </span>
+</template>
+
+<script>
+export default {
+  name: "ArrowCollapseVerticalIcon",
+  props: {
+    title: {
+      type: String,
+      default: "Arrow Collapse Vertical icon"
+    },
+    decorative: {
+      type: Boolean,
+      default: false
+    },
+    fillColor: {
+      type: String,
+      default: "currentColor"
+    }
+  }
+}
+</script>
