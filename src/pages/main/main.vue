@@ -4,9 +4,9 @@
                 <mu-breadcrumbs slot="left" divider="≡">
                     <mu-breadcrumbs-item v-for="item in items" :key="item.text" :disabled="item.disabled">{{item.text}}</mu-breadcrumbs-item>
                 </mu-breadcrumbs>
-                <mu-button icon slot="right" @click="goToUser">
-                    <mu-icon value="account_box" ></mu-icon>
-                </mu-button>
+                <!--<mu-button icon slot="right" @click="goToUser">-->
+                    <!--<mu-icon value="account_box" ></mu-icon>-->
+                <!--</mu-button>-->
             </mu-appbar>
 
 
@@ -24,6 +24,13 @@
                    <!--Primary</mu-button>-->
             <!--</mu-flex>-->
         <!--</mu-flex>-->
+            <mu-paper class="demo-paper" :z-depth="1">
+                <mu-flex class="flex-wrapper" justify-content="center">
+                    <mu-paper class="demo-paper" :z-depth="1"></mu-paper>
+
+                </mu-flex>
+            </mu-paper>
+
         <mu-flex class="flex-wrapper" justify-content="center">
             <mu-flex class="flex-demo" justify-content="center" align-items="center"  >
                 <mu-flex   align-items="center" color="primary">
@@ -172,10 +179,15 @@
 </script>
 
 <style>
+    .demo-paper {
+        margin: 10px 5px;
+
+        border-radius: 5px
+    }
     .flex-wrapper {
         width: 100%;
         height: 100px;
-        margin-top: 15px;
+        margin-top: 5px;
         border-radius: 5px
     }
     .flex-img{
@@ -191,10 +203,10 @@
 
         border-radius: 5px;
         width: 100%;
-        height: 100px;
+        height: 100%;
         background-color: #e0e0e0;
         text-align: center;
         line-height: 32px;
-        margin-left: 8px;
+        margin: 0 5px;
     }
 </style>
