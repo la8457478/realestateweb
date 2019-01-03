@@ -9,15 +9,65 @@
                 </mu-button>
             </mu-appbar>
 
-            <mu-grid-list class="gridlist-demo" cols="4">
-                <mu-grid-tile v-for="tile, index in list" :key="index">
-                    <span slot="title">{{tile.title}}</span>
-                    <span slot="subTitle">by <b>{{tile.author}}</b></span>
-                    <mu-button slot="action" icon>
-                        <mu-icon value="star_border"></mu-icon>
-                    </mu-button>
-                </mu-grid-tile>
-            </mu-grid-list>
+
+        <!--<mu-button color="secondary">Secondary</mu-button>-->
+        <!--<mu-button color="success">Success</mu-button>-->
+        <!--<mu-button color="warning">Warning</mu-button>-->
+        <!--<mu-button color="info">Info</mu-button>-->
+        <!--<mu-button color="error">Error</mu-button>-->
+        <!--<mu-button disabled>disabled</mu-button>-->
+        <!--<mu-flex class="flex-wrapper" justify-content="center">-->
+            <!--<mu-flex class="flex-demo" justify-content="center" fill="true">-->
+                <!--<mu-button color="primary">-->
+
+                    <!--<mu-icon left value="grade"></mu-icon>-->
+                   <!--Primary</mu-button>-->
+            <!--</mu-flex>-->
+        <!--</mu-flex>-->
+        <mu-flex class="flex-wrapper" justify-content="center">
+            <mu-flex class="flex-demo" justify-content="center" align-items="center"  >
+                <mu-flex   align-items="center" color="primary">
+                    <img src="/static/img/demo.png" class="flex-img" />
+                </mu-flex>
+                <mu-flex  justify-content="center"  color="primary" >
+                    <mu-button flat color="primary">Primary</mu-button>
+                </mu-flex>
+            </mu-flex>
+            <mu-flex class="flex-demo" justify-content="center" align-items="center"  >
+                <mu-flex   align-items="center" color="primary">
+                    <img src="/static/img/demo.png" class="flex-img" />
+                </mu-flex>
+                <mu-flex  justify-content="center"  color="primary" >
+                    <mu-button flat color="primary">Primary</mu-button>
+                </mu-flex>
+            </mu-flex>
+        </mu-flex>
+        <mu-flex class="flex-wrapper" justify-content="center">
+            <mu-flex class="flex-demo" justify-content="center" align-items="center"  >
+                <mu-flex   align-items="center" color="primary">
+                    <img src="/static/img/demo.png" class="flex-img" />
+                </mu-flex>
+                <mu-flex  justify-content="center"  color="primary" >
+                    <mu-button flat color="primary">Primary</mu-button>
+                </mu-flex>
+            </mu-flex>
+            <mu-flex class="flex-demo" justify-content="center" align-items="center"  >
+                <mu-flex   align-items="center" color="primary">
+                    <img src="/static/img/demo.png" class="flex-img" />
+                </mu-flex>
+                <mu-flex  justify-content="center"  color="primary" >
+                    <mu-button flat color="primary">Primary</mu-button>
+                </mu-flex>
+            </mu-flex>
+        </mu-flex>
+        <!--<mu-grid-list class="gridlist-demo" cols="1">-->
+        <!--<mu-sub-header>选择业务</mu-sub-header>-->
+        <!--<mu-grid-tile v-for="tile, index in list" :key="index" color="primary">-->
+        <!--<img :src="tile.image" >-->
+        <!--<span slot="title">{{tile.title}}</span>-->
+        <!--<span slot="subTitle">by <b>{{tile.author}}</b></span>-->
+        <!--</mu-grid-tile>-->
+        <!--</mu-grid-list>-->
         <!--<view v-if="hasLogin" class="hello">-->
             <!--<view class="title">-->
                 <!--您好 {{userName}}，您已成功登录。-->
@@ -40,11 +90,11 @@
 </template>
 
 <script>
-    import {
-        mapState
-    } from 'vuex'
+    import {mapState} from 'vuex'
+    import MuButton from "../../components/muse-ui/es5/Button/Button";
 
     export default {
+        components: {MuButton},
         computed: mapState(['forcedLogin', 'hasLogin', 'userName']),
         data(){
             return{
@@ -122,4 +172,29 @@
 </script>
 
 <style>
+    .flex-wrapper {
+        width: 100%;
+        height: 100px;
+        margin-top: 15px;
+        border-radius: 5px
+    }
+    .flex-img{
+           /*margin-top:10%;*/
+        margin-left:10%;
+
+    }
+
+    .flex-demo {
+        /*background-image: url(/static/img/demo.png);*/
+        background-repeat:no-repeat;
+        background-position:10% center;
+
+        border-radius: 5px;
+        width: 100%;
+        height: 100px;
+        background-color: #e0e0e0;
+        text-align: center;
+        line-height: 32px;
+        margin-left: 8px;
+    }
 </style>
